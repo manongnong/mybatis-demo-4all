@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    hikari:
+      connectionTimeout: 30000
+      idleTimeout: 600000
+      maxLifetime: 1800000
+      maximumPoolSize: 20
+      minimumIdle: 5
+    url: jdbc:mysql://localhost:3306/mybatis-demo?useUnicode=true&characterEncoding=UTF-8&useSSL=false&connectTimeout=30000&socketTimeout=15000&autoReconnectForPools=true&allowMultiQueries=true&failOverReadOnly=false&rewriteBatchedStatements=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+mybatis:
+  config-location: classpath:spring/mybatis-config.xml
+  mapper-locations: classpath*:/mapper/**/*.xml
+
